@@ -1,0 +1,148 @@
+.textcontrol {
+	border: 3px double #CCCCCC;
+	width: 230px;
+}
+
+.cm-1 {
+	margin: 13px 15px 11px 14px;
+	padding: 0px 0px 4px 8px;
+}
+
+.cm-2 {
+	font-size: 24px;
+	color: #2f0571;
+	padding: -1px 1px 3px 7px;
+	margin: -20px -39px 3px -38px;
+	top: 19px;
+}
+
+.fieldsetter {
+	background-color: #b7f35738;
+	padding: 9px 0px 77px 38px;
+	margin: 6px 737px 4px 13px;
+}
+
+.textcontrol {
+	font-size: 22px;
+	margin: -37px 34px 4px 175px;
+	padding: 13px 10px 3px 8px;
+	border-radius: 5px;
+	text-align: left;
+	text-decoration-color: blue;
+	color: #565609;
+}
+
+/* input.placeholder {
+    text-align: center;
+	font-size: 18px;
+}
+ */
+.studentIdlabel {
+	font-size: 22px;
+}
+
+.disabled {
+	background: #c3c0c05e;
+	color: #333;
+	border: 1px solid #666;
+	font-size: 20px;
+}
+
+input:hover {
+	background-color: #00ff4375;
+	color: #fafaf9;
+}
+
+.formpage {
+	
+}
+
+.cm-3 {
+	padding: 0px 19px 2px 56px;
+	margin: 7px 5px 5px -7px;
+	text-align: -webkit-auto;
+}
+
+.cm-4 {
+	/* padding: -2px 7px 5px -5px; */
+	margin: -45px 23px -2px 128px;
+	display: inherit;
+}
+
+.textcontrol-1 {
+	font-size: 19px;
+	margin: -37px 34px 4px 175px;
+	padding: 13px 10px 3px 8px;
+	border-radius: 5px;
+	text-align: left;
+	text-decoration-color: blue;
+	color: #565609;
+}
+
+.actionbuttons {
+	padding: 0px 31px 1px 7px; margin : 9px 120px 18px 3px;
+	background-color: #23672385;
+	border-radius: 4px;
+	margin: 9px 120px 18px 3px;
+}
+
+.cancel {
+	padding: 2px 17px 12px 11px;
+	margin: 29px 16px 14px 9px;
+}
+
+.cancelbutton {
+	padding: 11px 11px 11px 11px;
+	margin: 11px 11px 11px 11px;
+	display: inline-block;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #2b800073;
+	box-shadow: none;
+	opacity: unset;
+	color: #252324d9;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.submit {
+	padding: 5px 0px 0px 178px;
+	margin: -97px 37px 0px 38px;
+}
+
+.preview {
+	padding: 22px 14px 3px 13px;
+	margin: -7px -14px -10px -3px;
+	display: inline-block;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #2b800073;
+	box-shadow: none;
+	opacity: unset;
+	color: #252324d9;
+	font-size: 16px;
+	font-style: italic;
+}
+
+.confirmationmsgmodal {
+	display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	
+}
+
+.cancelbutton {
+	{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+}

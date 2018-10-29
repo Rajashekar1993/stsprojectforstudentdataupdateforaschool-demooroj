@@ -1,0 +1,48 @@
+#loadHeader {
+	height: 65px;
+}
+
+.main {
+	margin: auto;
+	width: 96%;
+	border: 2px solid #73AD21;
+	padding: 14px 37px 11px 12px;
+	background-color: #00d38514;
+	border-radius: 4px;
+}
+
+.welcomemessage a {
+	color: blue;
+	text-align: right;
+	text-decoration: none;
+}
+
+.button {
+	background-color: #A4D28B;
+	display: -webkit-inline-box;
+	margin: -29px -98px -7px 1077px;
+	padding: 0px 16px 2px 2px;
+	border-radius: 6px;
+}
+
+.login {
+	padding: 7px 10px 10px 11px;
+	margin: 13px -3px 6px 11px;
+	border-radius: 6px;
+	background-color: #d6ec1be3;
+	font-size: 16px;
+	opacity: 1;
+}
+
+.signup {
+	padding: 7px 10px 10px 11px;
+	margin: 13px -3px 6px 11px;
+	border-radius: 6px;
+	background-color: #d6ec1be3;
+	font-size: 16px;
+	opacity: 1;
+}
+
+.button2 {
+	padding: 12px 28px;
+}
