@@ -20,6 +20,17 @@ public class StudentsData implements Serializable {
 	private String motherName;
 	private String confirmationmessage;
 
+	private  int pageNumber;
+	
+	
+	public int getPageNumber() {
+		return pageNumber;
+	}
+
+	public void setPageNumber(int pageNumber) {
+		this.pageNumber = pageNumber;
+	}
+
 	public String getConfirmationmessage() {
 		return confirmationmessage;
 	}

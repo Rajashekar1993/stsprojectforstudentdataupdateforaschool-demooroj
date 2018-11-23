@@ -44,7 +44,7 @@
 
 
 
-<title>agent landing page..</title>
+<title>Students List..</title>
 </head>
 
 <!-- 	<script src="js/landingpage.js"></script>
@@ -55,7 +55,7 @@
 
 	<div class="container">
 		<form:form id="searchForm" class="form-horizontal"
-			modelAttribute="studentsdata" cssClass="well form-horizontal"
+			modelAttribute="studentslist" cssClass="well form-horizontal"
 			method="POST" action="#">
 
 			<fieldset class="col-sm-12 bordure">
@@ -67,10 +67,10 @@
 					<label for="Search" class="col-sm-2 control-label">Search</label>
 					<div class="col-sm-10">
 						<span id="searchError"></span>
-						<form:input id="search" path="studentRollno" class="form-control"
+						<!-- <form:input id="search" path="studentRollno" class="form-control"
 							maxLength="20" />
 						<form:errors id="search_error" path="studentRollno"
-							cssClass="label label-danger" />
+							cssClass="label label-danger" /> -->
 						<button type="submit" class="btn btn-primary btn-lg btn-block">Search</button>
 
 					</div>
@@ -86,47 +86,45 @@
 							<th>Student Roll No</th>
 							<th>Student Father Name</th>
 
-							<s:url var="url_create" value="#" />
+							<!-- <s:url var="url_create" value="#" />
 							<th><a class="btn btn-info" href="${url_create}"><s:message
-										code="create" /></a></th>
+										code="create" /></a></th> -->
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${studentsdata}" var="studentsdata">
+						<c:forEach items="${studentslist}" var="studentslist">
 							<tr>
-								<td><li id="studentId" value="${studentsdata.studentId}">${studentsdata.studentId}</li></td>
-								<td><li id="familymember1"
-									value="${studentsdata.sFirstName}">
-										${studentsdata.sFirstName}</li></td>
-								<td><li id="familymember2"
-									value="${studentsdata.applicationId}">
-										${studentsdata.applicationId}</li></td>
-								<td><li id="familymember3"
-									value="${studentsdata.studentRollno}">
-										${studentsdata.studentRollno}</li></td>
-								<td><li id="familymember4"
-									value="${studentsdata.fatherName}">
-										${studentsdata.fatherName}</li></td>
+								<td><li id="studentId" value="${studentslist.studentId}">${studentslist.studentId}</li></td>
+								<td><li id="sFirstName" value="${studentslist.sFirstName}">
+										${studentslist.sFirstName}</li></td>
+								<td><li id="applicationId"
+									value="${studentslist.applicationId}">
+										${studentslist.applicationId}</li></td>
+								<td><li id="studentRollno"
+									value="${studentslist.studentRollno}">
+										${studentslist.studentRollno}</li></td>
+								<td><li id="fatherName" value="${studentslist.fatherName}">
+										${studentslist.fatherName}</li></td>
 
 								<s:url var="url_update"
-									value="/studentsdata/form/${studentsdata.studentId}" />
-								<td><a class="btn btn-info" href="${url_update}"><s:message
-											code="edit" /></a></td>
-								<!-- <td><a class="popup meetballs" onclick="meetballs(${studentsdata.id});">... -->
+									value="/studentslist/form/${studentslist.studentId}" />
+								<!-- <td><a class="btn btn-info" href="${url_update}"><s:message
+											code="edit" /></a></td> -->
+								<!-- <td><a class="popup meetballs" onclick="meetballs(${studentslist.id});">... -->
 								<!-- <td><a class="popup meetballs" >... -->
 								<td><a class="popup meetballs">... <span
 										class="popuptext" id="myPopup"
-										onclick="deleteFamily(${studentsdata.studentId});">delete</span>
+										onclick="deleteFamily(${studentslist.studentId});">delete</span>
 								</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
 
-				<c:if test="${fn:length(studentsdata) gt 4}">
+				<c:if test="${fn:length(studentslist) gt 4}">
 					<div class="pagers">
 						<div class="pagination">
-							<s:url var="prev" value="/getListOfFamilyDTOs/${pageNumber-1}" />
+							<s:url var="prev" value="/studentlist/${pageNumber-1}" />
 							<c:choose>
 								<c:when
 									test="${pageNumber == 1||pageNumber==0 || pageNumber== -1}">
@@ -140,7 +138,7 @@
 								<a href="#">${pageNumber}</a>
 							</c:if>
 
-							<s:url var="next" value="/getListOfFamilyDTOs/${pageNumber+1}" />
+							<s:url var="next" value="/studentlist/${pageNumber+1}" />
 							<c:choose>
 								<c:when test="${pageNumber==lastPageNumber||pageNumber==0}">
 								</c:when>
@@ -150,7 +148,7 @@
 							</c:choose>
 
 							<c:if test="${pageNumber!=0}">
-								<s:url var="viewAll" value="/getListOfFamilyDTOs/${0}" />
+								<s:url var="viewAll" value="/studentlist/${0}" />
 								<a id="viewAll" href="${viewAll}" class="">View All</a>
 							</c:if>
 						</div>
