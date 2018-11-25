@@ -91,7 +91,7 @@
 										code="create" /></a></th> -->
 						</tr>
 					</thead>
-					<tbody>
+					<tbody style="overflow-x:auto;">
 						<c:forEach items="${studentslist}" var="studentslist">
 							<tr>
 								<td><li id="studentId" value="${studentslist.studentId}">${studentslist.studentId}</li></td>

@@ -9,7 +9,7 @@ public class StudentsData implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	private Integer studentId;
+	private Long studentId;
 	private String sFirstName;
 	private String sLastName;
 	private String surname;
@@ -39,11 +39,11 @@ public class StudentsData implements Serializable {
 		this.confirmationmessage = confirmationmessage;
 	}
 
-	public Integer getStudentId() {
+	public Long getStudentId() {
 		return studentId;
 	}
 
-	public void setStudentId(Integer studentId) {
+	public void setStudentId(Long studentId) {
 		this.studentId = studentId;
 	}
 

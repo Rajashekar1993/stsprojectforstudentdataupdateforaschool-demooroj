@@ -10,6 +10,7 @@ public interface StudentBussinessService {
 	public List<StudentsData> getAllStudentsList(int pagenumber);
 	public List<StudentsData> getStudentsBasicList(int pagenumber);
 	public List<StudentsData> getStudentsUsingProjections();
+	public String deleteStudent(Integer id);
 	//public StudentsData editStudentsData(Long studentid);
 	//public String deleteStudentData(Long studentid);
 	//public Long getStudentsCount();

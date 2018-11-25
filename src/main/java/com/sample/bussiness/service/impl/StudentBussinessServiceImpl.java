@@ -21,6 +21,7 @@ import com.sample.data.repository.jpa.StudentRepo;
 public class StudentBussinessServiceImpl implements StudentBussinessService {
 
 	List<StudentsData> studentslist;
+	String CONFIRMATION_MSG;
 
 	@Resource
 	StudentRepo studentrepojpa;
@@ -33,7 +34,7 @@ public class StudentBussinessServiceImpl implements StudentBussinessService {
 	@Override
 	public String createStudent(StudentsData studentsdata) {
 
-		String CONFIRMATION_MSG;
+		
 		StudentEntity entity = new StudentEntity();
 		studentdataservicemappers.mapStudentDTOtoStudentEntity(studentsdata, entity);
 		StudentEntity savedentity = studentrepojpa.save(entity);
@@ -102,6 +103,20 @@ public class StudentBussinessServiceImpl implements StudentBussinessService {
 		}
 
 		return studentslist;
+	}
+
+	@Override
+	public String deleteStudent(Integer studentId) {
+		Long l = new Long(studentId);
+		if(studentrepojpa.existsById(l)==true) {
+			studentrepojpa.deleteById(l);
+			CONFIRMATION_MSG = "SUCCESS";
+		}else {
+			CONFIRMATION_MSG = "Record Not Found";
+		}
+		/*studentrepojpa.deleteById(l);
+		CONFIRMATION_MSG = "SUCCESS";*/
+		return CONFIRMATION_MSG;
 	}
 
 }

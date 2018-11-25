@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -79,6 +80,17 @@ public class FamilyController {
 		studentslist = studentBussinessService.getAllStudentsList(pageNumber);
 		modelobject.put("studentslist", studentslist);
 
+		return "studentslist";
+	}
+	
+	@RequestMapping(value= "/studentslist/form/{studentId}", method=RequestMethod.GET)
+	public String deleteStudentandGetStudentsLIst(@PathVariable Integer studentId,Map<String, Object> modelobject ){
+		int pageNumber = 0;
+		String confirmationMessage = studentBussinessService.deleteStudent(studentId);
+		List<StudentsData> studentslist = new ArrayList<StudentsData>();
+		studentslist = studentBussinessService.getAllStudentsList(pageNumber);
+		modelobject.put("studentslist", studentslist);
+		modelobject.put("Confirmationmessage", confirmationMessage);
 		return "studentslist";
 	}
 	

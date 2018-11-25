@@ -21,7 +21,7 @@ public class StudentEntity implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "student_id", nullable = false)
-	private Integer studentId;
+	private Long studentId;
 
 	@Column(name = "s_First_Name", nullable = false, length = 40)
 	private String sFirstName;
@@ -47,11 +47,11 @@ public class StudentEntity implements Serializable {
 	@Column(name = "mother_name", nullable = false, length = 40)
 	private String motherName;
 
-	public Integer getStudentId() {
+	public Long getStudentId() {
 		return studentId;
 	}
 
-	public void setStudentId(Integer studentId) {
+	public void setStudentId(Long studentId) {
 		this.studentId = studentId;
 	}
 
