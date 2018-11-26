@@ -31,16 +31,34 @@
 	var="js_url_bootstrap_datepicker_locale" />
 <s:url value="/js/jquery.validate.min.js" var="js_url_jQueryvalidation" />
 <s:url value="/js/landingpage.js" var="js_url_landingpage" />
+<s:url value="/js/studentslist.js" var="js_url_studentslist" />
 
 
-<script type="text/javascript" src="${js_url_validation}"><jsp:text/></script>
-<script type="text/javascript" src="${js_url_jquery}"><jsp:text/></script>
-<script type="text/javascript" src="${js_url_bootstrap}"><jsp:text/></script>
-<script type="text/javascript" src="${js_url_bootstrap_datepicker}"><jsp:text/></script>
+<script type="text/javascript" src="${js_url_validation}">
+	<jsp:text/>
+</script>
+<script type="text/javascript" src="${js_url_jquery}">
+	<jsp:text/>
+</script>
+<script type="text/javascript" src="${js_url_bootstrap}">
+	<jsp:text/>
+</script>
+<script type="text/javascript" src="${js_url_bootstrap_datepicker}">
+	<jsp:text/>
+</script>
 <script type="text/javascript"
-	src="${js_url_bootstrap_datepicker_locale}" charset="UTF-8"><jsp:text/></script>
-<script type="text/javascript" src="${js_url_jQueryvalidation}"><jsp:text/></script>
-<script type="text/javascript" src="${js_url_landingpage}"><jsp:text/></script>
+	src="${js_url_bootstrap_datepicker_locale}" charset="UTF-8">
+	<jsp:text/>
+</script>
+<script type="text/javascript" src="${js_url_jQueryvalidation}">
+	<jsp:text/>
+</script>
+<script type="text/javascript" src="${js_url_landingpage}">
+	<jsp:text/>
+</script>
+<script type="text/javascript" src="${js_url_studentslist}">
+	<jsp:text/>
+</script>
 
 
 
@@ -91,10 +109,12 @@
 										code="create" /></a></th> -->
 						</tr>
 					</thead>
-					<tbody style="overflow-x:auto;">
+					<tbody style="overflow-x: auto;">
 						<c:forEach items="${studentslist}" var="studentslist">
 							<tr>
-								<td><li id="studentId" value="${studentslist.studentId}">${studentslist.studentId}</li></td>
+								<td><li id="studentId"
+									data-student-id="${studentslist.studentId}"
+									value="${studentslist.studentId}">${studentslist.studentId}</li></td>
 								<td><li id="sFirstName" value="${studentslist.sFirstName}">
 										${studentslist.sFirstName}</li></td>
 								<td><li id="applicationId"
@@ -112,10 +132,10 @@
 											code="edit" /></a></td> -->
 								<!-- <td><a class="popup meetballs" onclick="meetballs(${studentslist.id});">... -->
 								<!-- <td><a class="popup meetballs" >... -->
-								<td><a class="popup meetballs">... <span
-										class="popuptext" id="myPopup"
-										onclick="deleteFamily(${studentslist.studentId});">delete</span>
-								</a></td>
+								<td><a class="meetballs" id="meetballs">... </a> <span
+									class="popup" id="myPopup"
+									data-student-id="${studentslist.studentId}">delete</span>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
