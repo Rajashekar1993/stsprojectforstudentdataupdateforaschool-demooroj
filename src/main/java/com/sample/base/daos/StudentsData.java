@@ -19,12 +19,21 @@ public class StudentsData implements Serializable {
 	private String fatherName;
 	private String motherName;
 	private String confirmationmessage;
+	private String totalStudentsCount;
 
 	private  int pageNumber;
 	
 	
 	public int getPageNumber() {
 		return pageNumber;
+	}
+
+	public String getTotalStudentsCount() {
+		return totalStudentsCount;
+	}
+
+	public void setTotalStudentsCount(String totalStudentsCount) {
+		this.totalStudentsCount = totalStudentsCount;
 	}
 
 	public void setPageNumber(int pageNumber) {

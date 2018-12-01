@@ -73,12 +73,26 @@ public class FamilyController {
 		return studentdata;
 	}*/
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping(value = "/studentlist", method = RequestMethod.GET)
 	public String getStudentList(Map<String, Object> modelobject, HttpServletRequest request,  HttpServletResponse response) {
 		int pageNumber = 0;
 		List<StudentsData> studentslist = new ArrayList<StudentsData>();
-		studentslist = studentBussinessService.getAllStudentsList(pageNumber);
-		modelobject.put("studentslist", studentslist);
+		/*studentslist = studentBussinessService.getAllStudentsList(pageNumber);
+		modelobject.put("studentslist", studentslist);*/
+		
+		for(Map.Entry entry:((Map<String, Object>) studentBussinessService.getAllStudentsDatabyMap(pageNumber)).entrySet()){
+		    if(!(entry==null)) {
+		    	if(entry.getKey()=="studentslist") {
+		    		if(entry.getValue() != null && entry.getValue() instanceof List<?>){
+		    			modelobject.put("studentslist", entry.getValue());
+		    		}else {
+		    			modelobject.put("totalstudentscount", entry.getValue());
+		    		}
+			    }
+		    }
+			
+		}
 
 		return "studentslist";
 	}

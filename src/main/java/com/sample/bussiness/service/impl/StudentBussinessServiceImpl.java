@@ -1,7 +1,9 @@
 package com.sample.bussiness.service.impl;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.stream.StreamSupport;
 
 import javax.annotation.Resource;
 
@@ -73,7 +75,7 @@ public class StudentBussinessServiceImpl implements StudentBussinessService {
 		Iterable<StudentEntity> studentsEntities;
 
 		if (pagenumber == 0) {
-			studentsEntities = studentrepojpa.fetchStudentsBasicDetails();
+			studentsEntities = studentrepojpa.findAll();
 		} else {
 			studentsEntities = studentrepojpa.findAll(PageRequest.of(pagenumber - 1, 5));
 		}
@@ -118,5 +120,41 @@ public class StudentBussinessServiceImpl implements StudentBussinessService {
 		CONFIRMATION_MSG = "SUCCESS";*/
 		return CONFIRMATION_MSG;
 	}
+
+	@Override
+	public Integer getStudentsCount() {
+		
+		return null;
+	}
+
+	@Override
+	public HashMap<String, Object> getAllStudentsDatabyMap(int pagenumber) {
+		
+		HashMap <String, Object> mapList = new HashMap<String, Object>();
+		Long totalStudents;
+		studentslist = new ArrayList<StudentsData>();
+		Iterable<StudentEntity> studentsEntities;
+
+		if (pagenumber == 0) {
+			studentsEntities = studentrepojpa.findAll();
+			totalStudents = StreamSupport.stream(studentsEntities.spliterator(),
+					false).count();
+		} else {
+			studentsEntities = studentrepojpa.findAll(PageRequest.of(pagenumber - 1, 5));
+			totalStudents = StreamSupport.stream(studentsEntities.spliterator(),
+					false).count();
+		}
+
+		for (StudentEntity studentEnitity : studentsEntities) {
+			studentslist.add(studentdataservicemappers.mapStudentsEntitytoStudentsData(studentEnitity));
+		}
+		
+		mapList.put("studentslist", studentslist);
+		mapList.put("totalStudents", totalStudents);
+
+		return mapList;
+	}
+	
+	
 
 }
