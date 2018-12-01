@@ -1,19 +1,19 @@
 $(document).ready(function() {
 
-/*	$('.meetballs').on('click',function(){
+	$('.meetballs').on('click',function(){
 		var currentrow = $(this).closest('tr');
 		currentrow.find('td:eq(5)').on('click', function(e){
 			$(".popup").show(); 
 		});
-		$('.popup').on('click', _handleDownloadgrp);
+		$('.popup').on('click', _handledelete);
 	});
-	*/
 	
 	
+	
+//  Copy of above code in JS for click on specific cell tool tip. //commentable
 	
 	var table = document.getElementById("studentslist"), rIndex, cIndex;
 	// var tablelength = document.getElementById("familyListTable").rows.length;
-	// loadListPage
 
 	for (var i = 1; i < table.rows.length; i++) {
 		table.rows[i].cells[5].onclick = function(e) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
 			alert(rIndex, cIndex);
 		};
 	}
-//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// document click for closing tool tips
 	$(document).on("click",function (event) {
 		   if(!$(event.target).is('.popup') && !$(event.target).is('.meetballs')) {
 		     $("#myPopup").addClass('hide');
@@ -36,8 +36,8 @@ $(document).ready(function() {
 	
 	
 	
-////////////////////////////////////////////////////////////////////////////////////////////////////////////	
-	
+//Comment the below code since it is for reference
+	/*
 	_handleDownloadgrp = function(e) {
 		var studentId = $(this).attr("data-student-id");
 		var form = document.createElement("form");
@@ -55,9 +55,12 @@ $(document).ready(function() {
 		document.body.appendChild(form);
 		form.submit();
 		$('#downloadSheet').hide();
-	}
+	}*/
 
-	_handleDownloadgrp = function(e) {
+	
+	
+	
+	_handledelete = function(e) {
 		var studentId = $(this).attr("data-student-id");
 		var form = document.createElement("form");
 		form.method = "GET";
