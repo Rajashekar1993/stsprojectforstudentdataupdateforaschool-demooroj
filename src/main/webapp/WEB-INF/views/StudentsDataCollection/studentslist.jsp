@@ -132,10 +132,10 @@
 											code="edit" /></a></td> -->
 								<!-- <td><a class="popup meetballs" onclick="meetballs(${studentslist.id});">... -->
 								<!-- <td><a class="popup meetballs" >... -->
-								<td><a class="meetballs" id="meetballs">... </a> <span
-									class="popup" id="myPopup"
-									data-student-id="${studentslist.studentId}">delete</span>
-								</td>
+								<td><a class="meetballs ${studentslist.studentId}"
+									data-studentid="${studentslist.studentId}" id="meetballs">...
+								</a> <span class="popup ${studentslist.studentId}" id="myPopup"
+									data-student-id="${studentslist.studentId}">delete</span></td>
 							</tr>
 						</c:forEach>
 					</tbody>

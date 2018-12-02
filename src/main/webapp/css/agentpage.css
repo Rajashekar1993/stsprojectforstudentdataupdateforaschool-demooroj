@@ -18,8 +18,8 @@
 
 .fieldsetter {
 	background-color: #b7f35738;
-	padding: 9px 0px 77px 38px;
-	margin: 6px 737px 4px 13px;
+	padding: 11px 7px 18px 42px;
+    margin: 10px 737px 16px 15px;
 }
 
 .textcontrol {
@@ -100,8 +100,6 @@ input:hover {
 	background-color: #2b800073;
 	box-shadow: none;
 	opacity: unset;
-	color: #252324d9;
-	font-size: 16px;
 	font-style: italic;
 }
 
@@ -139,10 +137,10 @@ input:hover {
 }
 
 .cancelbutton {
-    color: #aaaaaa;
+    color: #ffffff;
     float: right;
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 800;
 }
 
 tr.visible-xs,

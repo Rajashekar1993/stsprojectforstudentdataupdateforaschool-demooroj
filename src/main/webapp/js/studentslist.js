@@ -1,29 +1,19 @@
 $(document).ready(function() {
 
-	$('.meetballs').on('click',function(){
-		var currentrow = $(this).closest('tr');
+	$('.meetballs').on('click',function(event){
+		/*var currentrow = $(this).closest('tr');
 		currentrow.find('td:eq(5)').on('click', function(e){
 			$(".popup").show(); 
-		});
+		});*/
+		
+		var classOfRow = $(this).attr("data-studentid");
+		$('.'+classOfRow).show();
 		$('.popup').on('click', _handledelete);
+		$(this).next().toggleClass('hide');
 	});
 	
 	
-	
-//  Copy of above code in JS for click on specific cell tool tip. //commentable
-	
-	var table = document.getElementById("studentslist"), rIndex, cIndex;
-	// var tablelength = document.getElementById("familyListTable").rows.length;
 
-	for (var i = 1; i < table.rows.length; i++) {
-		table.rows[i].cells[5].onclick = function(e) {
-			var popup = document.getElementById("myPopup");
-			popup.classList.toggle("show");
-			rIndex = this.parentElement.rowIndex;
-			cIndex = this.cellIndex;
-			alert(rIndex, cIndex);
-		};
-	}
 // document click for closing tool tips
 	$(document).on("click",function (event) {
 		   if(!$(event.target).is('.popup') && !$(event.target).is('.meetballs')) {
@@ -77,6 +67,11 @@ $(document).ready(function() {
 		document.body.appendChild(form);
 		form.submit();
 		$('#downloadSheet').hide();
+	}
+	
+	_handlepopup = function(e) {
+		var studentId = $(this).attr("data-studentid");
+		
 	}
 
 });
