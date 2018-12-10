@@ -9,6 +9,7 @@ $(document).ready(function() {
 		var classOfRow = $(this).attr("data-studentid");
 		$('.'+classOfRow).show();
 		$('.popup').on('click', _handledelete);
+		$('.popup2').on('click', _handledelete);
 		$(this).next().toggleClass('hide');
 	});
 	
@@ -47,9 +48,27 @@ $(document).ready(function() {
 		$('#downloadSheet').hide();
 	}*/
 
+//On click of .popup class call delete		
+	_handledelete = function(e) {
+		var studentId = $(this).attr("data-student-id");
+		var form = document.createElement("form");
+		form.method = "GET";
+		form.action = '/studentslist/form/'+studentId;
+		form.id = "downloadSheet";
+		var element1 = document.createElement("input");
+		var element2 = document.createElement("input");
+		element1.name = "studentId";
+		element1.value = studentId;
+		form.appendChild(element1);
+		element2.name = "type";
+		element2.value = "excelSheet";
+		form.appendChild(element2);
+		document.body.appendChild(form);
+		form.submit();
+		$('#downloadSheet').hide();
+	}
 	
-	
-	
+//On click of .popup2 class call edit page	
 	_handledelete = function(e) {
 		var studentId = $(this).attr("data-student-id");
 		var form = document.createElement("form");

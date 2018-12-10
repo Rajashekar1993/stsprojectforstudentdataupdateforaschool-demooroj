@@ -51,7 +51,7 @@
 	<jsp:text/>
 </script>
 <script type="text/javascript" src="${js_url_jQueryvalidation}">
-	<jsp:text/>
+	_$tag______
 </script>
 <script type="text/javascript" src="${js_url_landingpage}">
 	<jsp:text/>
@@ -135,7 +135,9 @@
 								<td><a class="meetballs ${studentslist.studentId}"
 									data-studentid="${studentslist.studentId}" id="meetballs">...
 								</a> <span class="popup ${studentslist.studentId}" id="myPopup"
-									data-student-id="${studentslist.studentId}">delete</span></td>
+									data-student-id="${studentslist.studentId}">delete</span>
+									<span class="popup2 ${studentslist.studentId}" id="myPopup2"
+									data-student-id="${studentslist.studentId}">edit</span></td>
 							</tr>
 						</c:forEach>
 					</tbody>
