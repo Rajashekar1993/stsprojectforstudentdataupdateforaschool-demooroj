@@ -5,13 +5,15 @@ $(document).ready(function() {
 		currentrow.find('td:eq(5)').on('click', function(e){
 			$(".popup").show(); 
 		});*/
-		
+			
 		var classOfRow = $(this).attr("data-studentid");
 		$('.'+classOfRow).show();
 		$('.popup').on('click', _handledelete);
-		$('.popup2').on('click', _handledelete);
+		//$('.popup2').on('click', _handledelete);
 		$(this).next().toggleClass('hide');
 	});
+	
+	
 	
 	
 
@@ -89,7 +91,7 @@ $(document).ready(function() {
 	}
 	
 	_handlepopup = function(e) {
-		var studentId = $(this).attr("data-studentid");
+		var studentId = $(this).attr("data-studentedit-id");
 		
 	}
 

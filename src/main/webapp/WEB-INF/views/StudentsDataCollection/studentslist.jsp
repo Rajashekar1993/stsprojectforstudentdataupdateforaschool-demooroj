@@ -134,10 +134,13 @@
 								<!-- <td><a class="popup meetballs" >... -->
 								<td><a class="meetballs ${studentslist.studentId}"
 									data-studentid="${studentslist.studentId}" id="meetballs">...
-								</a> <span class="popup ${studentslist.studentId}" id="myPopup"
-									data-student-id="${studentslist.studentId}">delete</span>
-									<span class="popup2 ${studentslist.studentId}" id="myPopup2"
-									data-student-id="${studentslist.studentId}">edit</span></td>
+								</a>
+									<div class="${studentslist.studentId}">
+										<span class="popup" id="myPopup"
+											data-student-id="${studentslist.studentId}">delete</span> <span
+											class="popup2" id="myPopup2"
+											data-studentedit-id="${studentslist.studentId}">edit</span>
+									</div></td>
 							</tr>
 						</c:forEach>
 					</tbody>

@@ -77,7 +77,6 @@ public class FamilyController {
 	@RequestMapping(value = "/studentlist", method = RequestMethod.GET)
 	public String getStudentList(Map<String, Object> modelobject, HttpServletRequest request,  HttpServletResponse response) {
 		int pageNumber = 0;
-		List<StudentsData> studentslist = new ArrayList<StudentsData>();
 		/*studentslist = studentBussinessService.getAllStudentsList(pageNumber);
 		modelobject.put("studentslist", studentslist);*/
 		
