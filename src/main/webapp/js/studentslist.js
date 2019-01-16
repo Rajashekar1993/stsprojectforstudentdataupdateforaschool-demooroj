@@ -13,9 +13,6 @@ $(document).ready(function() {
 		$(this).next().toggleClass('hide');
 	});
 	
-	
-	
-	
 
 // document click for closing tool tips
 	$(document).on("click",function (event) {
@@ -23,9 +20,6 @@ $(document).ready(function() {
 		     $("#myPopup").addClass('hide');
 		   }
 	});
-	
-	
-	
 	
 	
 	
@@ -71,7 +65,7 @@ $(document).ready(function() {
 	}
 	
 //On click of .popup2 class call edit page	
-	_handledelete = function(e) {
+	_handlepopup2 = function(e) {
 		var studentId = $(this).attr("data-student-id");
 		var form = document.createElement("form");
 		form.method = "GET";
