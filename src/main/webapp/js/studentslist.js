@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	
+	var classOfRow = $(this).attr("data-studentid");
+	$('.'+classOfRow).hide();
 
 	$('.meetballs').on('click',function(event){
 		/*var currentrow = $(this).closest('tr');
@@ -8,19 +11,19 @@ $(document).ready(function() {
 			
 		var classOfRow = $(this).attr("data-studentid");
 		$('.'+classOfRow).show();
-		$('.popup').on('click', _handledelete);
+		$('.delete').on('click', _handledelete);
 		//$('.popup2').on('click', _handledelete);
 		$(this).next().toggleClass('hide');
 	});
 	
+	
 
 // document click for closing tool tips
 	$(document).on("click",function (event) {
-		   if(!$(event.target).is('.popup') && !$(event.target).is('.meetballs')) {
+		   if(!$(event.target).is('.popups') && !$(event.target).is('.meetballs')) {
 		     $("#myPopup").addClass('hide');
 		   }
 	});
-	
 	
 	
 //Comment the below code since it is for reference

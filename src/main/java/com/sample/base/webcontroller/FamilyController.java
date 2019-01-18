@@ -40,9 +40,13 @@ public class FamilyController {
 	}
 
 	@RequestMapping("/agentLandingPage")
-	public ModelAndView agentLandingPage() {
+	public ModelAndView agentLandingPage(StudentsData studentsData) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("studentsdata", new StudentsData());
+		if(studentsData!=null) {
+			mv.addObject("studentsdata", studentsData);
+		}else {
+			mv.addObject("studentsdata", new StudentsData());
+		}
 		mv.setViewName("agentlandingpage");
 		return mv;
 	}

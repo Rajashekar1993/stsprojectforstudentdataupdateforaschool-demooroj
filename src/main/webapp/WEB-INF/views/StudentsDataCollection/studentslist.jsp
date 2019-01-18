@@ -135,11 +135,13 @@
 								<td><a class="meetballs ${studentslist.studentId}"
 									data-studentid="${studentslist.studentId}" id="meetballs">...
 								</a>
-									<div class="${studentslist.studentId}">
-										<span class="popup" id="myPopup"
+									<div>
+										<span class="${studentslist.studentId} popups" id="myPopup"> <span
+											class="delete" id="delete"
 											data-student-id="${studentslist.studentId}">delete</span> <span
-											class="popup2" id="myPopup2"
+											class="edit" id="edit"
 											data-studentedit-id="${studentslist.studentId}">edit</span>
+										</span>
 									</div></td>
 							</tr>
 						</c:forEach>

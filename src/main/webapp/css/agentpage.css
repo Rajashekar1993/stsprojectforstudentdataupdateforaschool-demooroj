@@ -19,7 +19,7 @@
 .fieldsetter {
 	background-color: #b7f35738;
 	padding: 11px 7px 18px 42px;
-    margin: 10px 737px 16px 15px;
+	margin: 10px 737px 16px 15px;
 }
 
 .textcontrol {
@@ -80,7 +80,8 @@ input:hover {
 }
 
 .actionbuttons {
-	padding: 0px 31px 1px 7px; margin : 9px 120px 18px 3px;
+	padding: 0px 31px 1px 7px;
+	margin: 9px 120px 18px 3px;
 	background-color: #23672385;
 	border-radius: 4px;
 	margin: 9px 120px 18px 3px;
@@ -124,29 +125,26 @@ input:hover {
 
 .confirmationmsgmodal {
 	display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 .cancelbutton {
-    color: #ffffff;
-    float: right;
-    font-size: 20px;
-    font-weight: 800;
+	color: #ffffff;
+	float: right;
+	font-size: 20px;
+	font-weight: 800;
 }
 
-tr.visible-xs,
-th.visible-xs,
-td.visible-xs {
-  display: none !important;
+tr.visible-xs, th.visible-xs, td.visible-xs {
+	display: none !important;
 }
 
 /* @media (max-width: 767px) {
@@ -234,34 +232,35 @@ th, td {
 tr:hover {background-color: #f5f5f5;}
 tr {background-color: #bbbbcc0d;}
  */
- 
- 
- table {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+table {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
 }
 
 table td, table th {
-    border: 1px solid #ddd;
-    padding: 8px;
+	border: 1px solid #ddd;
+	padding: 8px;
 }
 
-table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
 
-table tr:hover {background-color: #ddd;}
+table tr:hover {
+	background-color: #ddd;
+}
 
 table th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #4CAF50;
+	color: white;
 }
 
-table tr
-{
-    list-style: none outside none;
+table tr {
+	list-style: none outside none;
 }
 
 /* table tr li:before {
@@ -270,31 +269,27 @@ table tr
     margin: 0 0 0 -27px;
     padding: 0;
 } */
-
 table tr li {
-    list-style-type: none;
+	list-style-type: none;
 }
-
 
 table tr td #myPopup {
 	/* visibility: hidden; */
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
- 	display:none;
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-    cursor:pointer;
+	width: 120px;
+	background-color: cadetblue;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+	display: none;
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+	cursor: pointer;
+	display: inline-block
 }
 
-table tr td popup {
-	display:none;
-}
 
 .hide {
-	display:none;
+	display: none;
 }
