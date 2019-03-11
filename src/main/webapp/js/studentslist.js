@@ -53,7 +53,7 @@ $(document).ready(function() {
 		var form = document.createElement("form");
 		form.method = "GET";
 		form.action = '/studentslist/form/'+studentId;
-		form.id = "downloadSheet";
+		form.id = "deletestudentbypopup";
 		var element1 = document.createElement("input");
 		var element2 = document.createElement("input");
 		element1.name = "studentId";
@@ -67,13 +67,13 @@ $(document).ready(function() {
 		$('#downloadSheet').hide();
 	}
 	
-//On click of .popup2 class call edit page	
+//On click of .popup2 class call edit page	//handle pop up 2
 	_handlepopup2 = function(e) {
 		var studentId = $(this).attr("data-student-id");
 		var form = document.createElement("form");
 		form.method = "GET";
 		form.action = '/studentslist/form/'+studentId;
-		form.id = "downloadSheet";
+		form.id = "editstudentbypopup";
 		var element1 = document.createElement("input");
 		var element2 = document.createElement("input");
 		element1.name = "studentId";
